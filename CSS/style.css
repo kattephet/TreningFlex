@@ -1,0 +1,383 @@
+@font-face {
+    font-family: 'gilroy-extrabold';
+    src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 28px 10px;
+}
+
+h3 {
+  margin: 12px;
+}
+
+h1 {
+  font-family: 'Impact', Helvetica, Arial, sans-serif;
+}
+
+h2,
+h3 {
+  font-family: 'gilroy-extrabold', Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+p {
+  margin: 10px 10px 40px 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+}
+
+/* classes */
+
+.navigation {
+  font-family: 'gilroy-extrabold', Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  padding: 0;
+  flex-direction: column;
+  height: 154px;
+}
+
+.navigation a {
+  color: white;
+  font-size: 1.2em;
+  border: solid 1px #2167db4f;
+  height: 100%;
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.navigation a:hover {
+  background: #2167db;
+}
+
+.main-nav {
+  background: #0255db;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  box-shadow: 0px 0px 3px 1px black;
+  z-index: 9999;
+}
+
+.mini-logo-container {
+  display: none;
+}
+
+.main-logo {
+  color: white;
+  margin-top: 136px;
+  text-align: center;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  background: grey url('../images/main-logo.jpg') no-repeat center / cover;
+}
+
+.menu-leftsite {
+  position: fixed;
+  border: 2.5px solid black;
+  border-left: none;
+  border-radius: 0 10px 10px 0px;
+  top: 40%;
+  width: 35px;
+  height: 80px;
+  display: flex;
+  opacity: 0.7;
+  transition: 0.2s;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 0px 15px 3px #e3e3e3;
+}
+
+.menu-leftsite:hover {
+  opacity: 1;
+}
+
+.menu-leftsite a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fb-link {
+  background: #003b99;
+  border-radius: 0 7px 0 0;
+  color: white;
+}
+
+.instagram-link {
+  background: #590079;
+  border-radius: 0 0 7px 0;
+  color: white;
+}
+
+.tittle {
+  font-size: 3rem;
+  margin-top: 15px;
+}
+
+.subtittle {
+  font-family: Brush Script MT, Brush Script Std;
+  font-size: 1.7rem;
+  margin-top: auto;
+}
+
+.main-container {
+  width: 85%;
+  margin: 0 0 0 11%;
+}
+
+.main-content {
+  margin: 70px 0;
+}
+
+.primary,
+.tertiary {
+  margin-bottom: 30px;
+}
+
+
+.primary,
+.secondary,
+.tertiary {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: solid 2px #f7f7f7;
+  box-shadow: 0px 0px 10px 5px #f7f7f7;
+}
+
+.section {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: solid 2px #f7f7f7;
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.place-image {
+  width: 95%;
+  margin: 10px auto ;
+  box-shadow: 5px 5px 10px 2px #4a4a4a;
+}
+
+.wiki-container {
+  position: relative;
+}
+
+.wikipedia {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 7%;
+  left: 84%;
+}
+
+.main-footer {
+  background-color: grey;
+  padding: 30px 0;
+  border-top: solid 2px red;
+  font-family: 'gilroy-extrabold', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* Media queries */
+
+@media (min-width: 600px) {
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+    align-items: center;
+    height: auto;
+  }
+
+
+  .navigation a {
+  font-size: 1.3em;
+  }
+
+  .mini-logo {
+    width: 50px;
+    margin: 2.5px 0 2.5px 10px;
+  }
+
+  .mini-logo-container {
+    display: flex;
+    flex: 1;
+  }
+
+  .main-logo {
+    margin-top: 51px;
+  }
+
+  .tittle {
+    font-size: 4rem;
+  }
+
+  .subtittle {
+    font-size: 2.2rem;
+    align-self: flex-end;
+    margin-right: 35px;
+  }
+
+  .menu-leftsite {
+    width: 35px;
+    height: 80px;
+  }
+
+  .main-container {
+    width: 80%;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    max-width: 600px;
+    font-size: 1.4rem;
+    flex: 1;
+    align-self: center;
+    padding: 15px;
+  }
+
+  .tertiary {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    font-size: 1.4rem;
+    margin: 0 10px 40px 10px;
+  }
+
+  .wiki-container {
+    max-width: 600px;
+    align-self: center;
+  }
+
+  .wikipedia {
+    width: 40px;
+    height: 40px;
+    top: 6%;
+    left: 86%;
+  }
+
+  p {
+    margin: 40px 25px;
+  }
+
+}
+
+@media (min-width: 960px) {
+
+  .main-container {
+    width: 80%;
+  }
+
+  .tittle {
+    font-size: 5.5rem;
+  }
+
+
+  .navigation {
+    flex: 2;
+  }
+
+  .main-content {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .primary,
+  .secondary {
+    flex: 1;
+    align-self: flex-start;
+    max-width: 680px;
+  }
+
+  .secondary {
+    margin-left: 50px;
+  }
+
+}
+
+@media (min-width: 1400px) {
+
+  .right {
+    flex-direction: row;
+  }
+
+  .left {
+    flex-direction: row-reverse;
+  }
+
+  .right p {
+    flex: 2.5;
+    margin: 40px 35px 20px 25px;
+    align-self: center;
+  }
+
+  .left p{
+    flex: 2.5;
+    margin: 40px 25px 20px 35px;
+    align-self: center;
+  }
+
+  .place-image {
+    flex: 1 30%;
+    margin: 20px;
+    max-width: 500px;
+  }
+
+  .wikipedia {
+    top: 9%;
+    left: 87%;
+  }
+}
+
+/* Float Clearfix ------------------ */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
