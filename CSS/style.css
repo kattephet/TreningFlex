@@ -37,12 +37,9 @@ body {
   min-height: 100vh;
 }
 
-p {
-  margin: 10px 10px 40px 10px;
-}
-
 a {
   text-decoration: none;
+  color: black;
 }
 
 main {
@@ -163,6 +160,10 @@ main {
   margin: 70px 0;
 }
 
+.main-content p {
+    margin: 10px 10px 40px 10px;
+}
+
 .primary,
 .tertiary {
   margin-bottom: 30px;
@@ -209,15 +210,34 @@ main {
 }
 
 .main-footer {
-  background-color: grey;
-  padding: 30px 0;
-  border-top: solid 2px red;
+  background-color: #bfbfbf;
+  border-top: solid 2px #7a7a7a;
   font-family: 'gilroy-extrabold', Helvetica, Arial, sans-serif;
-  font-size: 0.7rem;
   text-align: center;
 }
 
-/* Media queries */
+
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact p {
+  margin: 10px 0;
+}
+
+.contact a:hover {
+  color: #474747;
+}
+
+.copyrights {
+ font-size: 0.7rem;
+ padding: 30px 0 10px 0;
+}
+
+
+/* -------------------- Media queries --------------------*/
 
 @media (min-width: 600px) {
 
@@ -272,21 +292,25 @@ main {
     flex-direction: column;
   }
 
+  .main-content p {
+    margin: 40px 25px;
+  }
+
+  .primary,
+  .secondary,
+  .section {
+    font-size: 1.4rem;
+  }
+
   .primary,
   .secondary {
     max-width: 600px;
-    font-size: 1.4rem;
     flex: 1;
     align-self: center;
     padding: 15px;
   }
 
-  .tertiary {
-    font-size: 1.4rem;
-  }
-
   .section {
-    font-size: 1.4rem;
     margin: 0 10px 40px 10px;
   }
 
@@ -301,23 +325,13 @@ main {
     top: 6%;
     left: 86%;
   }
-
-  p {
-    margin: 40px 25px;
-  }
-
 }
 
 @media (min-width: 960px) {
 
-  .main-container {
-    width: 80%;
-  }
-
   .tittle {
     font-size: 5.5rem;
   }
-
 
   .navigation {
     flex: 2;
@@ -339,7 +353,17 @@ main {
     margin-left: 50px;
   }
 
-}
+  .contact {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .telefon-contact,
+  .email-contact {
+    padding-left: 20px;
+  }
 
 @media (min-width: 1400px) {
 
@@ -374,10 +398,3 @@ main {
     left: 87%;
   }
 }
-
-/* Float Clearfix ------------------ */
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
