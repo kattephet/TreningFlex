@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'gilroy-extrabold';
-    src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
-         url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "gilroy-extrabold";
+  src: url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -23,12 +23,12 @@ h3 {
 }
 
 h1 {
-  font-family: 'Impact', Helvetica, Arial, sans-serif;
+  font-family: "Impact", Helvetica, Arial, sans-serif;
 }
 
 h2,
 h3 {
-  font-family: 'gilroy-extrabold', Helvetica, Arial, sans-serif;
+  font-family: "gilroy-extrabold", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -59,7 +59,7 @@ main {
 /* classes */
 
 .navigation {
-  font-family: 'gilroy-extrabold', Helvetica, Arial, sans-serif;
+  font-family: "gilroy-extrabold", Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: space-around;
   flex: 1;
@@ -85,7 +85,6 @@ main {
   background: #2167db;
 }
 
-
 .main-nav {
   background: #0255db;
   position: fixed;
@@ -107,7 +106,7 @@ main {
   height: 450px;
   display: flex;
   flex-direction: column;
-  background: grey url('../images/main-logo.jpg') no-repeat center / cover;
+  background: grey url("../images/main-logo.jpg") no-repeat center / cover;
 }
 
 .menu-leftsite {
@@ -141,7 +140,7 @@ main {
 
 .fb-link,
 .instagram-link {
-color: white;
+  color: white;
 }
 
 .fb-link {
@@ -181,7 +180,7 @@ color: white;
 }
 
 .main-content p {
-    margin: 10px 10px 40px 10px;
+  margin: 10px 10px 40px 10px;
 }
 
 .primary,
@@ -191,9 +190,9 @@ color: white;
 }
 
 .content-style {
-font-size: 1.2rem;
-padding: 10px;
-border: solid 2px #f7f7f7;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: solid 2px #f7f7f7;
 }
 
 .shadow {
@@ -207,7 +206,7 @@ border: solid 2px #f7f7f7;
 
 .tertiary img[src*="place"] {
   width: 95%;
-  margin: 10px auto ;
+  margin: 10px auto;
   box-shadow: 5px 5px 10px 2px #4a4a4a;
 }
 
@@ -226,7 +225,7 @@ border: solid 2px #f7f7f7;
 .main-footer {
   background-color: #bfbfbf;
   border-top: solid 2px #7a7a7a;
-  font-family: 'gilroy-extrabold', Helvetica, Arial, sans-serif;
+  font-family: "gilroy-extrabold", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -244,14 +243,13 @@ border: solid 2px #f7f7f7;
 }
 
 .copyrights {
- font-size: 0.7rem;
- padding: 30px 0 10px 0;
+  font-size: 0.7rem;
+  padding: 30px 0 10px 0;
 }
 
 /* -------------------- Media queries --------------------*/
 
 @media (min-width: 600px) {
-
   .navigation {
     display: flex;
     flex-direction: row;
@@ -261,7 +259,7 @@ border: solid 2px #f7f7f7;
   }
 
   .navigation a {
-  font-size: 1.3em;
+    font-size: 1.3em;
   }
 
   .mini-logo {
@@ -306,7 +304,7 @@ border: solid 2px #f7f7f7;
     margin: 40px 25px;
   }
 
- .content-style {
+  .content-style {
     font-size: 1.4rem;
   }
 
@@ -336,7 +334,6 @@ border: solid 2px #f7f7f7;
 }
 
 @media (min-width: 960px) {
-
   .tittle {
     font-size: 5.5rem;
   }
@@ -372,27 +369,27 @@ border: solid 2px #f7f7f7;
   .email-contact {
     padding-left: 20px;
   }
-
+}
 @media (min-width: 1400px) {
-
-  .right {
+  div.section:nth-of-type(odd) div.content {
     flex-direction: row;
   }
 
-  .left {
+  div.section:nth-of-type(even) div.content{
     flex-direction: row-reverse;
   }
 
-  .right p {
+  div.section div.content p {
     flex: 2.5;
-    margin: 40px 35px 20px 25px;
     align-self: center;
   }
 
-  .left p{
-    flex: 2.5;
+  div.section:nth-of-type(odd) div.content p {
+    margin: 40px 35px 20px 25px;
+  }
+
+  div.section:nth-of-type(even) div.content p {
     margin: 40px 25px 20px 35px;
-    align-self: center;
   }
 
   .tertiary img[src*="place"] {
