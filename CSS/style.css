@@ -204,6 +204,11 @@ main {
   flex-direction: column;
 }
 
+.capFirstL p::first-letter {
+  font-size: 35px;
+  margin-left: 15px;
+}
+
 .tertiary img[src*="place"] {
   width: 95%;
   margin: 10px auto;
